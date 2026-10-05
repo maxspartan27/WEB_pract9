@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгуки та Рейтинги — Aroma & Taste | Практична робота №9</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Стилі -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <!-- Інфо-стрічка -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>вул. Шевченка, 12, Львів</span>
+                <span style="opacity: 0.5; margin: 0 4px;">•</span>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+            </div>
+            <div class="top-bar-item">
+                <span class="badge-student"><i class="fa-solid fa-graduation-cap"></i> Практична робота №9</span>
+                <span class="status-badge">
+                    <span class="status-dot"></span>
+                    Рейтинг 4.9 ★
+                </span>
+                <span><i class="fa-solid fa-award" style="margin-right: 4px;"></i> Топ-3 закладів Львова за версією TripAdvisor</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Наскрізне меню -->
+    <header>
+        <div class="container nav-bar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                Aroma<span>&</span>Taste
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Відкрити меню навігації">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Головна</a></li>
+                    <li><a href="menu.html"><i class="fa-solid fa-utensils"></i> Меню</a></li>
+                    <li><a href="promotions.html"><i class="fa-solid fa-tags"></i> Акції</a></li>
+                    <li><a href="booking.html"><i class="fa-solid fa-calendar-check"></i> Бронювання</a></li>
+                    <li><a href="reviews.html" class="active"><i class="fa-solid fa-star"></i> Відгуки</a></li>
+                </ul>
+            </nav>
+            <a href="booking.html" class="nav-cta-btn"><i class="fa-solid fa-chair"></i> Забронювати стіл</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-heart"></i> Довіра гостей • Практична робота №9</span>
+            <h1 class="section-title">Відгуки наших гостей та Незалежні рейтинги</h1>
+            <p class="section-subtitle">Ознайомтеся з реальними враженнями відвідувачів про атмосферу, рівень спешелті кави та авторські страви ресторану:</p>
+        </div>
+
+        <!-- Підсумковий блок рейтингу (Rating Summary) -->
+        <div class="reviews-summary">
+            <div class="rating-big-box">
+                <div class="rating-big-score">4.9</div>
+                <div class="rating-big-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="rating-big-count">Понад 650 верифікованих оцінок</div>
+            </div>
+            <div class="rating-bars">
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">5 зірок</span>
+                    <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 89%;"></div></div>
+                    <span class="rating-bar-value">89%</span>
+                </div>
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">4 зірки</span>
+                    <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 8%;"></div></div>
+                    <span class="rating-bar-value">8%</span>
+                </div>
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">3 зірки</span>
+                    <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 2%;"></div></div>
+                    <span class="rating-bar-value">2%</span>
+                </div>
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">2 зірки</span>
+                    <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 1%;"></div></div>
+                    <span class="rating-bar-value">1%</span>
+                </div>
+                <div class="rating-bar-row">
+                    <span class="rating-bar-label">1 зірка</span>
+                    <div class="rating-bar-track"><div class="rating-bar-fill" style="width: 0%;"></div></div>
+                    <span class="rating-bar-value">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ТАБЛИЦЯ 1: Зведена оцінка за критеріями (Таблиця з інформацією) -->
+        <div class="table-section">
+            <div class="section-header" style="margin-top: 0; margin-bottom: 15px;">
+                <span class="section-pill"><i class="fa-solid fa-chart-pie"></i> Аналітика відгуків</span>
+                <h2 class="section-title">Зведена таблиця оцінок за ключовими критеріями</h2>
+                <p class="section-subtitle">Детальні показники задоволеності гостей за результатами внутрішнього опитування та агрегаторів:</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-list-check"></i> Критерій оцінки</th>
+                            <th><i class="fa-solid fa-star"></i> Середній бал</th>
+                            <th><i class="fa-solid fa-users"></i> Кількість відгуків</th>
+                            <th><i class="fa-solid fa-medal"></i> Відзнака</th>
+                            <th><i class="fa-solid fa-info-circle"></i> Коментар експертів</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>☕ Спешелті кава та баристика</strong></td>
+                            <td class="table-highlight">4.98 / 5.0</td>
+                            <td>480 оцінок</td>
+                            <td><span class="table-badge badge-gold">⭐ Еталон Львова</span></td>
+                            <td>Власне свіже обсмажування, ідеальний екстракт, баристи-призери чемпіонатів</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🍲 Авторська кухня та гарячі страви</strong></td>
+                            <td class="table-highlight">4.92 / 5.0</td>
+                            <td>395 оцінок</td>
+                            <td><span class="table-badge badge-green">✓ Вибір гурманів</span></td>
+                            <td>Свіжий норвезький лосось, римська паста карбонара, білі карпатські гриби</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🍰 Кондитерські десерти та випічка</strong></td>
+                            <td class="table-highlight">4.96 / 5.0</td>
+                            <td>520 оцінок</td>
+                            <td><span class="table-badge badge-gold">⭐ Хіт міста</span></td>
+                            <td>Баскський чизкейк Сан-Себастьян та тірамісу визнані найкращими в місті</td>
+                        </tr>
+                        <tr>
+                            <td><strong>⚡ Швидкість подачі та турбота</strong></td>
+                            <td class="table-highlight">4.88 / 5.0</td>
+                            <td>410 оцінок</td>
+                            <td><span class="table-badge badge-green">✓ Відмінно</span></td>
+                            <td>Середній час подачі гарячих страв — 14 хв, напоїв — до 4 хв</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🌿 Атмосфера, інтер'єр та музика</strong></td>
+                            <td class="table-highlight">4.95 / 5.0</td>
+                            <td>465 оцінок</td>
+                            <td><span class="table-badge badge-gold">⭐ Затишок року</span></td>
+                            <td>Панорамні вікна, живий вечірній джаз по п'ятницях та зелена літня тераса</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Картки відгуків від гостей -->
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-comments"></i> Пряма мова</span>
+            <h2 class="section-title">Що говорять постійні відвідувачі</h2>
+            <p class="section-subtitle">Чесні думки людей, які зробили «Aroma & Taste» своїм улюбленим місцем для зустрічей:</p>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid">
+            <!-- Відгук 1 -->
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Олена Мельник" class="review-avatar">
+                        <div class="review-author">
+                            <h4>Олена Мельник <span class="verified-badge"><i class="fa-solid fa-certificate"></i> Верифікований гість</span></h4>
+                            <span>Food-блогер, Львів • 2 дні тому</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">«Це абсолютне гастрономічне кохання! Баскський випалений чизкейк із солоною карамеллю — найкращий, що я куштувала в Україні. А кавова карта настільки глибока, що хочеться повертатися щодня за новим сортом еспресо.»</p>
+                </div>
+                <div>
+                    <span class="review-tag"><i class="fa-solid fa-cake-candles"></i> Замовляла: Баскський чизкейк + Флет-вайт</span>
+                    <div>
+                        <button class="review-vote-btn" onclick="voteReview(this)" type="button">
+                            <i class="fa-regular fa-thumbs-up"></i> Корисно (<span class="vote-count">24</span>)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Відгук 2 -->
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Андрій Ковальчук" class="review-avatar">
+                        <div class="review-author">
+                            <h4>Андрій Ковальчук <span class="verified-badge"><i class="fa-solid fa-certificate"></i> Верифікований гість</span></h4>
+                            <span>Підприємець • 1 тиждень тому</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">«Ідеальне місце як для ранкової робочої зустрічі з ноутбуком, так і для романтичної вечері. Стейк із лосося на грилі приготований бездоганно: хрустка скоринка та соковита серединка. Окремий респект за швидкий Wi-Fi 200 Мбіт/с!»</p>
+                </div>
+                <div>
+                    <span class="review-tag"><i class="fa-solid fa-utensils"></i> Замовляв: Стейк лосося + Cold Brew Tonic</span>
+                    <div>
+                        <button class="review-vote-btn" onclick="voteReview(this)" type="button">
+                            <i class="fa-regular fa-thumbs-up"></i> Корисно (<span class="vote-count">19</span>)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Відгук 3 -->
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Марко Савицький" class="review-avatar">
+                        <div class="review-author">
+                            <h4>Марко Савицький <span class="verified-badge"><i class="fa-solid fa-certificate"></i> Верифікований гість</span></h4>
+                            <span>Q-Grader, кавовий експерт • 2 тижні тому</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">«Як професійний суддя чемпіонатів барист, я надзвичайно вимогливий до екстракції еспресо. Ефіопія митої обробки тут розкривається нотами бергамоту та стиглого персика. Обладнання топове, вода підготовлена бездоганно.»</p>
+                </div>
+                <div>
+                    <span class="review-tag"><i class="fa-solid fa-mug-hot"></i> Замовляв: Подвійний еспресо Доппіо</span>
+                    <div>
+                        <button class="review-vote-btn" onclick="voteReview(this)" type="button">
+                            <i class="fa-regular fa-thumbs-up"></i> Корисно (<span class="vote-count">31</span>)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Відгук 4 -->
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Софія та Данило" class="review-avatar">
+                        <div class="review-author">
+                            <h4>Софія та Данило <span class="verified-badge"><i class="fa-solid fa-certificate"></i> Верифікований гість</span></h4>
+                            <span>Гості зі столиці • 3 тижні тому</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">«Святкували річницю на літній терасі. Неймовірна романтична атмосфера: живі свічки, теплий плед, приємний джаз. Персонал зробив вишуканий комплімент від закладу. Обов'язково повернемося знову!»</p>
+                </div>
+                <div>
+                    <span class="review-tag"><i class="fa-solid fa-champagne-glasses"></i> Замовляли: Сет «Романтична вечеря»</span>
+                    <div>
+                        <button class="review-vote-btn" onclick="voteReview(this)" type="button">
+                            <i class="fa-regular fa-thumbs-up"></i> Корисно (<span class="vote-count">15</span>)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ТАБЛИЦЯ 2: Офіційні нагороди та визнання ресторану -->
+        <div class="table-section">
+            <div class="section-header" style="margin-top: 0; margin-bottom: 15px;">
+                <span class="section-pill"><i class="fa-solid fa-trophy"></i> Визнання критиків</span>
+                <h2 class="section-title">Офіційні гастрономічні нагороди закладу</h2>
+                <p class="section-subtitle">Професійне визнання від міжнародних гідів та національних ресторанних премій:</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-calendar"></i> Рік</th>
+                            <th><i class="fa-solid fa-award"></i> Премія / Відзнака</th>
+                            <th><i class="fa-solid fa-building"></i> Організація / Гайд</th>
+                            <th><i class="fa-solid fa-tag"></i> Номінація</th>
+                            <th><i class="fa-solid fa-circle-check"></i> Результат</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>2026</strong></td>
+                            <td>Travellers’ Choice Best of the Best</td>
+                            <td>TripAdvisor Global</td>
+                            <td>Топ-1% найкращих ресторанів Європи за відгуками туристів</td>
+                            <td><span class="table-badge badge-green">✓ Переможець</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2025</strong></td>
+                            <td>Національна премія СІЛЬ</td>
+                            <td>Асоціація рестораторів України</td>
+                            <td>Найкраща міська спешелті кав'ярня-ресторан</td>
+                            <td><span class="table-badge badge-gold">⭐ Золота сковорідка</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2025</strong></td>
+                            <td>SCA Excellence in Cup Quality</td>
+                            <td>Specialty Coffee Association (SCA)</td>
+                            <td>Бездоганний сенсорний стандарт приготування арабіки</td>
+                            <td><span class="table-badge badge-dark">Сертифіковано 90+</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2024</strong></td>
+                            <td>Lviv Gastronomic Culture Award</td>
+                            <td>Lviv Tourism & City Council</td>
+                            <td>Внесок у розвиток сучасної кулінарної культури Львова</td>
+                            <td><span class="table-badge badge-green">✓ Лауреат I ступеня</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Інтерактивна форма додавання нового відгуку -->
+        <div class="add-review-wrapper">
+            <div class="booking-form-header" style="text-align: center; margin-bottom: 25px;">
+                <h2><i class="fa-solid fa-pen-nib" style="color: var(--accent); margin-right: 8px;"></i> Залишити свій відгук</h2>
+                <p>Ваша думка надзвичайно цінна для нас! Поділіться враженнями від свого візиту</p>
+            </div>
+            
+            <form id="reviewForm" onsubmit="submitReview(event)">
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="rev-name"><i class="fa-solid fa-user"></i> Ваше ім'я:</label>
+                        <div class="form-control-wrap">
+                            <input type="text" id="rev-name" required placeholder="Наприклад: Наталія Степаненко">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="rev-category"><i class="fa-solid fa-utensils"></i> Що ви оцінюєте:</label>
+                        <div class="form-control-wrap">
+                            <select id="rev-category">
+                                <option value="Кава та напої (Specialty)">Кава та напої (Specialty)</option>
+                                <option value="Основні ресторанні страви">Основні ресторанні страви</option>
+                                <option value="Кондитерські десерти">Кондитерські десерти</option>
+                                <option value="Сервіс та робота хостес">Сервіс та робота хостес</option>
+                                <option value="Загальне враження від закладу">Загальне враження від закладу</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fa-solid fa-star"></i> Ваша оцінка закладу:</label>
+                    <div class="interactive-stars" id="starRating">
+                        <i class="fa-solid fa-star active" data-rating="1"></i>
+                        <i class="fa-solid fa-star active" data-rating="2"></i>
+                        <i class="fa-solid fa-star active" data-rating="3"></i>
+                        <i class="fa-solid fa-star active" data-rating="4"></i>
+                        <i class="fa-solid fa-star active" data-rating="5"></i>
+                        <span class="rating-text" id="ratingText">5 з 5 — Бездоганно!</span>
+                    </div>
+                    <input type="hidden" id="revRating" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="rev-text"><i class="fa-solid fa-comment-dots"></i> Текст вашого відгуку:</label>
+                    <div class="form-control-wrap">
+                        <textarea id="rev-text" rows="3" required placeholder="Опишіть страву, напій чи особливий момент вашого візиту..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">
+                    <i class="fa-solid fa-paper-plane"></i> Надіслати відгук команді ресторану
+                </button>
+            </form>
+        </div>
+
+        <!-- Клікабельний банер швидкого бронювання столика -->
+        <a href="booking.html" class="banner-link" title="Перейти до онлайн-бронювання столика">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80" alt="Інтер'єр ресторану Aroma and Taste">
+            <div class="banner-overlay">
+                <span class="banner-badge"><i class="fa-solid fa-champagne-glasses"></i> Переконайтесь особисто</span>
+                <h3>Бажаєте відчути атмосферу «Aroma & Taste»?</h3>
+                <p>Зарезервуйте столик онлайн вже зараз та насолодіться вишуканими смаками авторської кухні й спешелті кави.</p>
+                <span class="banner-cta">Зарезервувати столик онлайн <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- Зовнішні посилання з target="_blank" -->
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-globe"></i> Незалежні сервіси</span>
+            <h2 class="section-title">Ми на світових платформах відгуків</h2>
+            <p class="section-subtitle">Перегляньте оцінки та фотографії гостей на незалежних міжнародних порталах:</p>
+        </div>
+
+        <div class="external-cards-grid">
+            <div class="external-card">
+                <div>
+                    <div class="external-card-top">
+                        <div class="external-icon maps"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <div>
+                            <h3>Google Maps Reviews</h3>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 6px;">4.9 (420+ оцінок)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Прочитайте детальні відгуки гостей на картах Google, перегляньте фото чеків та дізнайтеся завантаженість закладу в режимі реального часу.</p>
+                </div>
+                <div>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+                        <i class="fa-solid fa-star"></i> Читати Google Maps ↗
+                    </a>
+                </div>
+            </div>
+
+            <div class="external-card">
+                <div>
+                    <div class="external-card-top">
+                        <div class="external-icon tripadvisor"><i class="fa-solid fa-award"></i></div>
+                        <div>
+                            <h3>TripAdvisor Travelers' Choice</h3>
+                            <div class="rating-stars" style="color: #00aa6c;">
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 6px;">Сертифікат досконалості</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Ознайомтеся з враженнями іноземних та українських туристів, які обрали нас серед сотень закладів старовинного Львова.</p>
+                </div>
+                <div>
+                    <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+                        <i class="fa-solid fa-comments"></i> Читати TripAdvisor ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Повернутися на початок сторінки</a>
+        </div>
+    </main>
+
+    <!-- МОДЕРНІЗОВАНИЙ ПРЕМІАЛЬНИЙ ФУТЕР -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Колонка 1: Про заклад -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: #fff; font-size: 1.6rem; margin-bottom: 14px;">
+                        <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                        Aroma<span>&</span>Taste
+                    </a>
+                    <p>Ресторан-кав'ярня найвищої якості. Дякуємо кожному гостю за високі оцінки та щирі відгуки, які надихають нас ставати кращими щодня.</p>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--gold); font-size: 0.95rem; font-weight: 700; margin-bottom: 16px;">
+                        <i class="fa-solid fa-star"></i> 4.9 на основі понад 650 відгуків гостей
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Колонка 2: Наскрізна навігація проєкту -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-sitemap"></i> Навігація сайту</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Головна сторінка</a></li>
+                        <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Меню ресторану</a></li>
+                        <li><a href="promotions.html"><i class="fa-solid fa-chevron-right"></i> Акції та знижки</a></li>
+                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Бронювання столика</a></li>
+                        <li><a href="reviews.html"><i class="fa-solid fa-chevron-right"></i> Відгуки гостей</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: Розділи меню -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-list-check"></i> Розділи меню</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html#drinks"><i class="fa-solid fa-mug-saucer"></i> Кава та напої</a></li>
+                        <li><a href="menu.html#main-dishes"><i class="fa-solid fa-bowl-food"></i> Основні страви</a></li>
+                        <li><a href="menu.html#desserts"><i class="fa-solid fa-cake-candles"></i> Десерти</a></li>
+                        <li><a href="menu.html#nutrition"><i class="fa-solid fa-apple-whole"></i> КБЖВ та алергени</a></li>
+                        <li><a href="menu.html#coffee-map"><i class="fa-solid fa-earth-africa"></i> Карта Specialty</a></li>
+                        <li><a href="#top"><i class="fa-solid fa-arrow-up"></i> Нагору</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 4: Години роботи, контакти та картка автора -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-headset"></i> Служба турботи</h3>
+                    <div class="footer-schedule">
+                        <p><strong>Служба хостес:</strong> щодня 08:00 – 23:00</p>
+                    </div>
+                    <div class="footer-contact-item" style="margin-top: 14px;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Дзвінок: </span>
+                        <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Пошта: </span>
+                        <a href="mailto:reviews@aroma-taste.ua">reviews@aroma-taste.ua</a>
+                    </div>
+
+                    <!-- Студентська картка автора проєкту -->
+                    <div class="footer-student-card">
+                        <div class="footer-student-card-title">
+                            <i class="fa-solid fa-graduation-cap"></i> Навчальний проєкт
+                        </div>
+                        <div class="footer-student-card-author">
+                            Автор: <strong>Максим Ковалишин</strong>
+                        </div>
+                        <div class="footer-student-card-desc">
+                            Практична робота №9 &bull; 2026 рік
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижня смужка авторських прав та офіційного copyright -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright-main">
+                        <div class="copyright-row">
+                            <span class="copyright-symbol">©</span>
+                            <span>2026 Ресторан-кав'ярня «Aroma & Taste». <strong>Всі права захищені.</strong> Вміст захищений авторським правом.</span>
+                        </div>
+                        <div class="copyright-author-badge">
+                            <i class="fa-solid fa-user-pen"></i> Автор: <strong>Максим Ковалишин</strong>
+                            <span class="badge-dot">•</span>
+                            <i class="fa-solid fa-graduation-cap"></i> <strong>Практична робота №9</strong>
+                        </div>
+                    </div>
+                    <div class="footer-legal-links">
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot"></i> Google Maps ↗</a>
+                        <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-award"></i> TripAdvisor ↗</a>
+                        <span class="legal-badge"><i class="fa-solid fa-shield-halved"></i> Захищено авторським правом</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Контейнер для спливаючих повідомлень -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Плаваюча кнопка повернення вгору -->
+    <a href="#top" class="floating-top-btn" id="scrollTopBtn" title="Повернутися нагору" aria-label="Повернутися нагору">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Мобільне меню
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                    navMenu.classList.remove('open');
+                }
+            });
+        }
+
+        // Кнопка прокрутки вгору
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        if (scrollTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    scrollTopBtn.style.display = 'flex';
+                } else {
+                    scrollTopBtn.style.display = 'none';
+                }
+            });
+            scrollTopBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Функція відображення тостів
+        function showToast(message) {
+            const container = document.getElementById('toastContainer');
+            if (!container) return;
+            const toast = document.createElement('div');
+            toast.className = 'toast-msg';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check" style="color: var(--gold);"></i> <span>${message}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3200);
+        }
+
+        // Інтерактивні зірочки форми
+        const starRating = document.getElementById('starRating');
+        const ratingInput = document.getElementById('revRating');
+        const ratingText = document.getElementById('ratingText');
+
+        const ratingLabels = {
+            1: '1 з 5 — Потребує суттєвого покращення',
+            2: '2 з 5 — Нижче очікувань',
+            3: '3 з 5 — Задовільно, є зауваження',
+            4: '4 з 5 — Дуже добре, сподобалось',
+            5: '5 з 5 — Бездоганно, у повному захваті!'
+        };
+
+        if (starRating && ratingInput) {
+            const stars = starRating.querySelectorAll('i');
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = parseInt(star.getAttribute('data-rating'));
+                    ratingInput.value = rating;
+                    ratingText.textContent = ratingLabels[rating];
+                    updateStars(rating);
+                });
+
+                star.addEventListener('mouseenter', () => {
+                    const rating = parseInt(star.getAttribute('data-rating'));
+                    highlightStars(rating);
+                });
+            });
+
+            starRating.addEventListener('mouseleave', () => {
+                updateStars(parseInt(ratingInput.value));
+            });
+
+            function highlightStars(val) {
+                stars.forEach(s => {
+                    const r = parseInt(s.getAttribute('data-rating'));
+                    s.classList.toggle('active', r <= val);
+                });
+            }
+
+            function updateStars(val) {
+                stars.forEach(s => {
+                    const r = parseInt(s.getAttribute('data-rating'));
+                    s.classList.toggle('active', r <= val);
+                });
+            }
+        }
+
+        // Голосування за корисність відгуку
+        function voteReview(btn) {
+            const countSpan = btn.querySelector('.vote-count');
+            let count = parseInt(countSpan.textContent);
+            if (btn.classList.contains('voted')) {
+                btn.classList.remove('voted');
+                btn.querySelector('i').className = 'fa-regular fa-thumbs-up';
+                count--;
+                showToast('Ваш голос скасовано');
+            } else {
+                btn.classList.add('voted');
+                btn.querySelector('i').className = 'fa-solid fa-thumbs-up';
+                count++;
+                showToast('Дякуємо! Ваш відгук враховано як корисний');
+            }
+            countSpan.textContent = count;
+        }
+
+        // Обробка додавання нового відгуку
+        function submitReview(event) {
+            event.preventDefault();
+            const name = document.getElementById('rev-name').value.trim();
+            const category = document.getElementById('rev-category').value;
+            const rating = parseInt(document.getElementById('revRating').value) || 5;
+            const text = document.getElementById('rev-text').value.trim();
+
+            if (!name || !text) return;
+
+            let starsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    starsHtml += '<i class="fa-solid fa-star"></i> ';
+                } else {
+                    starsHtml += '<i class="fa-regular fa-star"></i> ';
+                }
+            }
+
+            const avatarUrls = [
+                'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80',
+                'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80',
+                'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&q=80'
+            ];
+            const randomAvatar = avatarUrls[Math.floor(Math.random() * avatarUrls.length)];
+
+            const newCard = document.createElement('div');
+            newCard.className = 'review-card';
+            newCard.style.animation = 'toastFade 0.6s ease';
+            newCard.innerHTML = `
+                <div>
+                    <div class="review-header">
+                        <img src="${randomAvatar}" alt="${name}" class="review-avatar">
+                        <div class="review-author">
+                            <h4>${name} <span class="verified-badge"><i class="fa-solid fa-certificate"></i> Новий відгук</span></h4>
+                            <span>Гість закладу • Щойно</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        ${starsHtml}
+                    </div>
+                    <p class="review-text">«${text}»</p>
+                </div>
+                <div>
+                    <span class="review-tag"><i class="fa-solid fa-utensils"></i> Оцінка: ${category}</span>
+                    <div>
+                        <button class="review-vote-btn" onclick="voteReview(this)" type="button">
+                            <i class="fa-regular fa-thumbs-up"></i> Корисно (<span class="vote-count">1</span>)
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            const grid = document.getElementById('reviewsGrid');
+            if (grid) {
+                grid.insertBefore(newCard, grid.firstChild);
+                newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            document.getElementById('reviewForm').reset();
+            if (starRating && ratingInput) {
+                ratingInput.value = '5';
+                ratingText.textContent = ratingLabels[5];
+                const stars = starRating.querySelectorAll('i');
+                stars.forEach(s => s.classList.add('active'));
+            }
+
+            showToast('Щиро дякуємо за ваш відгук! Його успішно додано до списку.');
+        }
+    </script>
+</body>
+</html>

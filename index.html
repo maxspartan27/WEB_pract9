@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma & Taste — Ресторан-кав'ярня авторської кухні | Практична робота №9</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Основна таблиця стилів -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <!-- Верхній інформаційний статус-бар -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>вул. Шевченка, 12, Львів</span>
+                <span style="opacity: 0.5; margin: 0 4px;">•</span>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+            </div>
+            <div class="top-bar-item">
+                <span class="badge-student">
+                    <i class="fa-solid fa-graduation-cap"></i> Практична робота №9
+                </span>
+                <span class="status-badge">
+                    <span class="status-dot"></span>
+                    Відчинено
+                </span>
+                <span><i class="fa-regular fa-clock" style="margin-right: 4px;"></i> Працюємо щодня до 23:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Наскрізне навігаційне меню проєкту -->
+    <header>
+        <div class="container nav-bar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                Aroma<span>&</span>Taste
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Відкрити меню навігації">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Головна</a></li>
+                    <li><a href="menu.html"><i class="fa-solid fa-utensils"></i> Меню</a></li>
+                    <li><a href="promotions.html"><i class="fa-solid fa-tags"></i> Акції</a></li>
+                    <li><a href="booking.html"><i class="fa-solid fa-calendar-check"></i> Бронювання</a></li>
+                    <li><a href="reviews.html"><i class="fa-solid fa-star"></i> Відгуки</a></li>
+                </ul>
+            </nav>
+            <a href="booking.html" class="nav-cta-btn"><i class="fa-solid fa-chair"></i> Забронювати стіл</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Головний промо-блок (Hero) -->
+        <section class="hero">
+            <span class="hero-pill"><i class="fa-solid fa-award"></i> Гастрономічний простір №1 у Львові • Практична робота №9</span>
+            <h1>Мистецтво спешелті кави та авторської кухні</h1>
+            <p>Завітайте до гастрономічного простору «Aroma & Taste». Спешелті зерна щотижневого свіжого обсмажування, вишукані страви від шеф-кухаря та затишна тераса в самому серці старовинного Львова.</p>
+            <div class="hero-actions">
+                <a href="booking.html" class="btn btn-primary">
+                    <i class="fa-solid fa-chair"></i> Зарезервувати столик <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="menu.html" class="btn btn-white">
+                    <i class="fa-solid fa-book-open"></i> Відкрити меню закладу
+                </a>
+            </div>
+        </section>
+
+        <!-- Смуга швидкої статистики / переваг -->
+        <div class="hero-stats-strip">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-coffee-bean fa-mug-saucer"></i></div>
+                <div class="stat-text">
+                    <h4>100% Арабіка</h4>
+                    <p>Спешелті зерна свіжої обсмажки</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-wine-glass"></i></div>
+                <div class="stat-text">
+                    <h4>15+ Напоїв</h4>
+                    <p>Класичні та авторські коктейлі</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                <div class="stat-text">
+                    <h4>4.9 Рейтинг</h4>
+                    <p>Понад 650 схвальних відгуків</p>
+                </div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <div class="stat-text">
+                    <h4>Своя кондитерська</h4>
+                    <p>Свіжа випічка та десерти щодня</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секція категорій меню з якірними лінками -->
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-compass"></i> Навігація по кухні</span>
+            <h2 class="section-title">Категорії меню ресторану</h2>
+            <p class="section-subtitle">Швидкий якірний перехід до улюбленого гастрономічного розділу закладу:</p>
+        </div>
+
+        <!-- Картки зі зв'язками на якорі файлу menu.html -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&w=800&q=80" alt="Кава та авторські напої">
+                    <span class="card-badge"><i class="fa-solid fa-mug-hot"></i> Specialty Coffee</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3><i class="fa-solid fa-coffee"></i> Кавова карта та Напої</h3>
+                        <p>Класичний подвійний еспресо, оксамитовий флет-вайт, сезонні матча-лате та крафтові ягідні чаї власного збору.</p>
+                    </div>
+                    <div style="margin-top: 22px;">
+                        <a href="menu.html#drinks" class="btn btn-outline" style="width: 100%;">
+                            До розділу напоїв <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Основні гарячі страви">
+                    <span class="card-badge"><i class="fa-solid fa-utensils"></i> Шеф-кухня</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3><i class="fa-solid fa-bowl-food"></i> Основні гарячі страви</h3>
+                        <p>Автентична паста з панчетою за римським рецептом, стейки дикого лосося на грилі та ніжні вершкові крем-супи.</p>
+                    </div>
+                    <div style="margin-top: 22px;">
+                        <a href="menu.html#main-dishes" class="btn btn-outline" style="width: 100%;">
+                            До основних страв <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Кондитерські десерти">
+                    <span class="card-badge"><i class="fa-solid fa-cake-candles"></i> Кондитерська</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3><i class="fa-solid fa-cookie-bite"></i> Кондитерські десерти</h3>
+                        <p>Іспанський карамельний чизкейк Сан-Себастьян, класичне італійське тірамісу та гарячий шоколадний вулкан.</p>
+                    </div>
+                    <div style="margin-top: 22px;">
+                        <a href="menu.html#desserts" class="btn btn-outline" style="width: 100%;">
+                            До списку десертів <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Клікабельне графічне посилання (Обов'язкова вимога методички) -->
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-fire"></i> Спеціальна пропозиція</span>
+            <h2 class="section-title">Акція місяця для ранкових гостей</h2>
+        </div>
+
+        <a href="promotions.html" class="banner-link" title="Перейти до розділу акцій ресторану">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1400&h=380&q=80" alt="Банер акції сніданків свіжий круасан та авторська кава">
+            <div class="banner-overlay">
+                <span class="banner-badge"><i class="fa-solid fa-tag"></i> Щоранку до 11:30</span>
+                <h3>🥐 Ранковий сет: Свіжий круасан + Кава за 85 грн</h3>
+                <p>Клацніть на зображення, щоб переглянути всі знижки, бонуси до Дня народження та спеціальні сети ресторану!</p>
+                <span class="banner-cta">Відкрити всі акції та знижки <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+        </a>
+
+        <!-- Особливості закладу (Features) -->
+        <section class="features-section">
+            <div class="section-header" style="margin-top: 0;">
+                <span class="section-pill"><i class="fa-solid fa-gem"></i> Наші переваги</span>
+                <h2 class="section-title">Чому обирають «Aroma & Taste»</h2>
+                <p class="section-subtitle">Ми турбуємось про кожну деталь вашого комфорту та гастрономічного задоволення:</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h4>Фермерські інгредієнти</h4>
+                    <p>Тільки свіжі локальні органічні овочі, добірне м'ясо та сертифіковані сири без компромісів.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                    <h4>Свіже обсмажування</h4>
+                    <p>Обсмажуємо зерна невеликими партіями щотижня для збереження повного букета смаку та аромату.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-couch"></i></div>
+                    <h4>Тепла атмосфера</h4>
+                    <p>Приємна акустична музика, м'які дивани, розетки для ноутбуків та швидкий швидкісний Wi-Fi.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h4>Сервіс з душею</h4>
+                    <p>Уважні офіціанти та професійні баристи допоможуть підібрати страву під будь-який ваш настрій.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ТАБЛИЦЯ: Щотижневий гастрономічний розклад та події ресторану -->
+        <section class="table-section">
+            <div class="section-header">
+                <span class="section-pill"><i class="fa-solid fa-calendar-days"></i> Афіша закладу</span>
+                <h2 class="section-title">Щотижневий гастрономічний розклад «Aroma & Taste»</h2>
+                <p class="section-subtitle">Завітайте на наші регулярні тематичні вечори, професійні кавові каппінги та вечори живого джазу:</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-calendar-week"></i> День тижня</th>
+                            <th><i class="fa-solid fa-clock"></i> Час</th>
+                            <th><i class="fa-solid fa-utensils"></i> Тематична подія / Акцент</th>
+                            <th><i class="fa-solid fa-user-tie"></i> Хто проводить</th>
+                            <th><i class="fa-solid fa-ticket"></i> Умови та особливості</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Понеділок</strong></td>
+                            <td>18:30 – 20:00</td>
+                            <td>☕ <strong>Відкритий Cupping & Кавова дегустація</strong></td>
+                            <td>Шеф-бариста (SCA Professional)</td>
+                            <td><span class="table-badge badge-green">Вільний вхід</span> Дегустація 5 нових мікролотів спешелті</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Вівторок</strong></td>
+                            <td>12:00 – 16:00</td>
+                            <td>🍲 <strong>День авторських гарячих супів від шефа</strong></td>
+                            <td>Су-шеф гарячого цеху</td>
+                            <td><span class="table-badge badge-gold">-20% на всі супи</span> Домашні часникові грінки у подарунок</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Середа</strong></td>
+                            <td>19:00 – 22:00</td>
+                            <td>🍝 <strong>Вечір автентичної італійської пасти</strong></td>
+                            <td>Шеф-кухар ресторану</td>
+                            <td><span class="table-badge badge-gold">Келих вина у подарунок</span> до кожної порції свіжої пасти</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Четвер</strong></td>
+                            <td>18:00 – 22:30</td>
+                            <td>🥩 <strong>Steak & Grill Night: Мармурова яловичина та лосось</strong></td>
+                            <td>Шеф-грільмейстер</td>
+                            <td><span class="table-badge badge-dark">Спецподача</span> Демігляс та запечені овочі гриль</td>
+                        </tr>
+                        <tr>
+                            <td><strong>П'ятниця</strong></td>
+                            <td>19:30 – 22:30</td>
+                            <td>🎷 <strong>Live Jazz & Soul на панорамній терасі</strong></td>
+                            <td>Lviv Jazz Trio (саксофон, клавіші, контрабас)</td>
+                            <td><span class="table-badge badge-dark">Депозитний резерв</span> Рекомендуємо бронювати стіл заздалегідь</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Субота</strong></td>
+                            <td>11:00 – 15:00</td>
+                            <td>🥐 <strong>Великий сімейний круасан-бранч</strong></td>
+                            <td>Власна кондитерська команда</td>
+                            <td><span class="table-badge badge-gold">Спецменю вихідного дня</span> Свіжа випічка щогодини з 08:00</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Неділя</strong></td>
+                            <td>18:00 – 21:00</td>
+                            <td>🍷 <strong>Винний салон: Локальні фермерські сири та риба</strong></td>
+                            <td>Шеф-сомельє закладу</td>
+                            <td><span class="table-badge badge-green">Дегустаційний сет</span> 4 позиції вин + гастрономічні закуски</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ТАБЛИЦЯ 2: Зведена інформація про стандарти закладу -->
+            <div class="section-header" style="margin-top: 45px; margin-bottom: 15px;">
+                <span class="section-pill"><i class="fa-solid fa-shield-halved"></i> Стандарти закладу</span>
+                <h2 class="section-title">Зведена таблиця параметрів якості та сервісів</h2>
+                <p class="section-subtitle">Основні показники роботи гастрономічного простору «Aroma & Taste»:</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-list-check"></i> Напрямок / Параметр</th>
+                            <th><i class="fa-solid fa-star"></i> Стандарт ресторану</th>
+                            <th><i class="fa-solid fa-certificate"></i> Сертифікація / Контроль</th>
+                            <th><i class="fa-solid fa-heart"></i> Перевага для гостя</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Спешелті кавове зерно</strong></td>
+                            <td>100% Арабіка класу Specialty, оцінка 86–90+ SCA</td>
+                            <td>SCA Certified Roaster, щотижневе обсмажування</td>
+                            <td>Багатий смаковий букет без гіркоти, безпечний рівень кофеїну</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Очищення та мінералізація води</strong></td>
+                            <td>6-ступеневий промисловий зворотний осмос BWT bestmax</td>
+                            <td>Контроль TDS щоранку (оптимум 110–130 ppm)</td>
+                            <td>Чистий та збалансований розкрив смаку напоїв та страв</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Борошно та молочні продукти</strong></td>
+                            <td>Фермерські яйця, вершки 33%, сири Pecorino & Burrata DOP</td>
+                            <td>HACCP міжнародний сертифікат безпечності кухні</td>
+                            <td>Справжній смак італійської класики без штучних барвників</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Швидкість приготування</strong></td>
+                            <td>Кава: до 3–4 хв, Сніданки: до 10 хв, Гаряче: до 16 хв</td>
+                            <td>Автоматизована POS-система Kitchen Display System</td>
+                            <td>Гарантія свіжої гарячої подачі без тривалого очікування</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Інклюзивність та доступність</strong></td>
+                            <td>Зручний пандус, широкі проходи, сповивальний столик</td>
+                            <td>Повна безбар'єрність для маломобільних груп гостей</td>
+                            <td>Комфортний простір для сімей з візочками та людей з інвалідністю</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pet-Friendly гостинність</strong></td>
+                            <td>Раді гостям з собаками будь-якого розміру</td>
+                            <td>Свіжа мисочка з фільтрованою водою та смаколик</td>
+                            <td>Не потрібно залишати улюбленця вдома під час прогулянки містом</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Галерея атмосфери закладу -->
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-camera"></i> Фотогалерея</span>
+            <h2 class="section-title">Атмосфера нашого ресторану</h2>
+            <p class="section-subtitle">Пориньте у вишуканий затишок, створений для ваших найкращих моментів:</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Затишні столики біля вікна">
+                <div class="gallery-overlay"><span><i class="fa-solid fa-eye"></i> Панорамні столики біля вікна</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" alt="Професійний лате-арт">
+                <div class="gallery-overlay"><span><i class="fa-solid fa-eye"></i> Чемпіонський лате-арт</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Зелена тераса ресторану">
+                <div class="gallery-overlay"><span><i class="fa-solid fa-eye"></i> Затишна літня тераса</span></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="Вечірня романтична посадка">
+                <div class="gallery-overlay"><span><i class="fa-solid fa-eye"></i> Романтичні вечері при свічках</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- МОДЕРНІЗОВАНИЙ ПРЕМІАЛЬНИЙ ФУТЕР -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Колонка 1: Про заклад та відзнаки -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: #fff; font-size: 1.6rem; margin-bottom: 14px;">
+                        <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                        Aroma<span>&</span>Taste
+                    </a>
+                    <p>Атмосферний гастрономічний простір, де європейські кулінарні традиції гармонійно поєднуються з культурою кави класу Specialty.</p>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--gold); font-size: 0.95rem; font-weight: 700; margin-bottom: 16px;">
+                        <i class="fa-solid fa-star"></i> 4.9 на основі понад 650 відгуків гостей
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Колонка 2: Наскрізна навігація проєкту -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-sitemap"></i> Навігація сайту</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Головна сторінка</a></li>
+                        <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Повне меню ресторану</a></li>
+                        <li><a href="promotions.html"><i class="fa-solid fa-chevron-right"></i> Знижки та спецпропозиції</a></li>
+                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Онлайн-резерв столика</a></li>
+                        <li><a href="reviews.html"><i class="fa-solid fa-chevron-right"></i> Відгуки та рейтинги</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: Якірні переходи Меню -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-list-check"></i> Розділи меню</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html#drinks"><i class="fa-solid fa-mug-saucer"></i> Кава та напої</a></li>
+                        <li><a href="menu.html#main-dishes"><i class="fa-solid fa-bowl-food"></i> Фірмові гарячі страви</a></li>
+                        <li><a href="menu.html#desserts"><i class="fa-solid fa-cake-candles"></i> Десерти кондитерської</a></li>
+                        <li><a href="menu.html#nutrition"><i class="fa-solid fa-apple-whole"></i> КБЖВ та алергени</a></li>
+                        <li><a href="menu.html#coffee-map"><i class="fa-solid fa-earth-africa"></i> Карта зерен Specialty</a></li>
+                        <li><a href="#top"><i class="fa-solid fa-arrow-up"></i> Піднятися нагору</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 4: Години роботи, зв'язок та картка автора -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-clock"></i> Графік і Зв'язок</h3>
+                    <div class="footer-schedule">
+                        <p><strong>Пн – Пт:</strong> 08:00 – 23:00</p>
+                        <p><strong>Сб – Нд:</strong> 09:00 – 23:30</p>
+                    </div>
+                    <div class="footer-contact-item" style="margin-top: 14px;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Бронювання: </span>
+                        <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Пошта: </span>
+                        <a href="mailto:info@aroma-taste.ua">info@aroma-taste.ua</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Львів, вул. Шевченка, 12</span>
+                    </div>
+
+                    <!-- Студентська картка автора проєкту -->
+                    <div class="footer-student-card">
+                        <div class="footer-student-card-title">
+                            <i class="fa-solid fa-graduation-cap"></i> Навчальний проєкт
+                        </div>
+                        <div class="footer-student-card-author">
+                            Автор: <strong>Максим Ковалишин</strong>
+                        </div>
+                        <div class="footer-student-card-desc">
+                            Практична робота №9 &bull; 2026 рік
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижня смужка авторських прав та офіційного copyright -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright-main">
+                        <div class="copyright-row">
+                            <span class="copyright-symbol">©</span>
+                            <span>2026 Ресторан-кав'ярня «Aroma & Taste». <strong>Всі права захищені.</strong> Вміст захищений авторським правом.</span>
+                        </div>
+                        <div class="copyright-author-badge">
+                            <i class="fa-solid fa-user-pen"></i> Автор: <strong>Максим Ковалишин</strong>
+                            <span class="badge-dot">•</span>
+                            <i class="fa-solid fa-graduation-cap"></i> <strong>Практична робота №9</strong>
+                        </div>
+                    </div>
+                    <div class="footer-legal-links">
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot"></i> Google Maps ↗</a>
+                        <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-award"></i> TripAdvisor ↗</a>
+                        <span class="legal-badge"><i class="fa-solid fa-shield-halved"></i> Захищено авторським правом</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Плаваюча кнопка повернення вгору -->
+    <a href="#top" class="floating-top-btn" id="scrollTopBtn" title="Повернутися нагору" aria-label="Повернутися нагору">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Скрипт взаємодії -->
+    <script>
+        // Мобільне навігаційне меню
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                    navMenu.classList.remove('open');
+                }
+            });
+        }
+
+        // Поведінка плаваючої кнопки нагору
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 350) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

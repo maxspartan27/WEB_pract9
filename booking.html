@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-бронювання столика та Контакти — Aroma & Taste | Практична робота №9</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Стилі -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <!-- Інфо-стрічка -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>вул. Шевченка, 12, Львів</span>
+                <span style="opacity: 0.5; margin: 0 4px;">•</span>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+            </div>
+            <div class="top-bar-item">
+                <span class="badge-student">
+                    <i class="fa-solid fa-graduation-cap"></i> Практична робота №9
+                </span>
+                <span class="status-badge">
+                    <span class="status-dot"></span>
+                    Миттєве підтвердження
+                </span>
+                <span><i class="fa-solid fa-bolt" style="margin-right: 4px;"></i> Смс-підтвердження броні за 5 хвилин</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Наскрізне меню -->
+    <header>
+        <div class="container nav-bar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                Aroma<span>&</span>Taste
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Відкрити меню навігації">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Головна</a></li>
+                    <li><a href="menu.html"><i class="fa-solid fa-utensils"></i> Меню</a></li>
+                    <li><a href="promotions.html"><i class="fa-solid fa-tags"></i> Акції</a></li>
+                    <li><a href="booking.html" class="active"><i class="fa-solid fa-calendar-check"></i> Бронювання</a></li>
+                    <li><a href="reviews.html"><i class="fa-solid fa-star"></i> Відгуки</a></li>
+                </ul>
+            </nav>
+            <a href="booking.html" class="nav-cta-btn"><i class="fa-solid fa-chair"></i> Забронювати стіл</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-calendar-days"></i> Онлайн-сервіс • Практична робота №9</span>
+            <h1 class="section-title">Онлайн-резерв столика та Контакти</h1>
+            <p class="section-subtitle">Забронюйте найкращий столик за кілька кліків або зв'яжіться зі службою хостес напряму:</p>
+        </div>
+
+        <!-- Спеціальні посилання tel: та mailto: (Обов'язкова вимога методички) -->
+        <div class="contact-links">
+            <div class="contact-card">
+                <div class="contact-card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h3>Прямий дзвінок хостес</h3>
+                <p>Миттєве бронювання та оперативне узгодження деталей візиту за телефоном:</p>
+                <a href="tel:+380991234567"><i class="fa-solid fa-phone"></i> +38 (099) 123-45-67</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-card-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <h3>Банкети та спецподії</h3>
+                <p>Надішліть вашу заявку на проведення свята, корпоративу або банкету:</p>
+                <a href="mailto:booking@aroma-taste.ua"><i class="fa-solid fa-envelope"></i> booking@aroma-taste.ua</a>
+            </div>
+        </div>
+
+        <!-- Переваги бронювання (Perks) -->
+        <div class="perks-strip">
+            <div class="perk-item">
+                <i class="fa-solid fa-wifi"></i>
+                <span>Швидкісний Wi-Fi 200 Мбіт/с</span>
+            </div>
+            <div class="perk-item">
+                <i class="fa-solid fa-square-parking"></i>
+                <span>Власна парковка для гостей</span>
+            </div>
+            <div class="perk-item">
+                <i class="fa-solid fa-paw"></i>
+                <span>Pet-friendly заклад</span>
+            </div>
+            <div class="perk-item">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Безготівковий розрахунок</span>
+            </div>
+        </div>
+
+        <!-- Візуальні зони ресторану -->
+        <div class="cards-grid" style="margin-top: 30px; margin-bottom: 35px;">
+            <div class="card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Панорамний зал біля вікна">
+                    <span class="card-badge"><i class="fa-solid fa-window-maximize"></i> Світлий зал</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Панорамні вікна</h3>
+                        <p>Ідеальне природне освітлення, вид на старовинну вулицю Шевченка, розетки біля кожного столу та комфортні м'які крісла.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=600&q=80" alt="Зелена літня тераса ресторану">
+                    <span class="card-badge"><i class="fa-solid fa-sun"></i> Тераса</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Зелена тераса</h3>
+                        <p>Свіже повітря, жива зелень та квіти, затишні кашемірові пледи й газові обігрівачі для атмосферних вечорів просто неба.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80" alt="Затишний лаунж ресторану">
+                    <span class="card-badge"><i class="fa-solid fa-couch"></i> VIP-Лаунж</span>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h3>Затишний VIP-лаунж</h3>
+                        <p>Автентичний камін, глибокі шкіряні дивани, приглушене камерне світло та повна приватність для особливих моментів.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Інтерактивна форма онлайн-бронювання -->
+        <div class="booking-form-wrapper">
+            <div class="booking-form-header">
+                <h2><i class="fa-solid fa-utensils" style="color: var(--accent); margin-right: 8px;"></i> Форма онлайн-резервації</h2>
+                <p>Заповніть контактну інформацію, і ми зарезервуємо ідеальне місце для вас</p>
+            </div>
+
+            <form id="reservationForm" onsubmit="handleBooking(event)">
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="name"><i class="fa-solid fa-user"></i> Ваше ім'я та прізвище:</label>
+                        <div class="form-control-wrap">
+                            <input type="text" id="name" required placeholder="Олександр Коваль">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone"><i class="fa-solid fa-phone"></i> Номер телефону:</label>
+                        <div class="form-control-wrap">
+                            <input type="tel" id="phone" required placeholder="+38 (099) 000-00-00">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="guests"><i class="fa-solid fa-users"></i> Кількість гостей:</label>
+                        <div class="form-control-wrap">
+                            <select id="guests" required>
+                                <option value="1-2">1–2 персони (романтичний столик)</option>
+                                <option value="3-4" selected>3–4 персони (сімейний круг)</option>
+                                <option value="5-8">5–8 персон (дружня компанія)</option>
+                                <option value="9+">9+ персон (великий банкет)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="datetime"><i class="fa-solid fa-calendar-days"></i> Дата та бажаний час:</label>
+                        <div class="form-control-wrap">
+                            <input type="datetime-local" id="datetime" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вибір зони посадки -->
+                <div class="form-group">
+                    <label><i class="fa-solid fa-map-pin"></i> Бажана зона відпочинку:</label>
+                    <div class="hall-selector">
+                        <div class="hall-option">
+                            <input type="radio" name="hall" id="hall-window" value="Панорамне вікно" checked>
+                            <label for="hall-window" class="hall-card">
+                                <i class="fa-solid fa-window-maximize"></i>
+                                <span>Біля панорамного вікна</span>
+                            </label>
+                        </div>
+                        <div class="hall-option">
+                            <input type="radio" name="hall" id="hall-terrace" value="Літня тераса">
+                            <label for="hall-terrace" class="hall-card">
+                                <i class="fa-solid fa-sun"></i>
+                                <span>Зелена літня тераса</span>
+                            </label>
+                        </div>
+                        <div class="hall-option">
+                            <input type="radio" name="hall" id="hall-lounge" value="Лаунж-зона">
+                            <label for="hall-lounge" class="hall-card">
+                                <i class="fa-solid fa-couch"></i>
+                                <span>Затишний лаунж</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="wishes"><i class="fa-solid fa-comment-dots"></i> Додаткові побажання (необов'язково):</label>
+                    <div class="form-control-wrap">
+                        <textarea id="wishes" rows="3" placeholder="Дитяче крісло, святкування дня народження, свічки, тихий куточок тощо..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Живий інтерактивний підсумок резервації -->
+                <div class="live-booking-summary">
+                    <div class="summary-header">
+                        <h4><i class="fa-solid fa-clipboard-check"></i> Попередній підсумок вашого візиту</h4>
+                        <span class="table-badge badge-green">Готово до резерву</span>
+                    </div>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <span class="summary-label">Обрана локація</span>
+                            <span class="summary-val" id="summaryHall">Панорамне вікно</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Кількість гостей</span>
+                            <span class="summary-val" id="summaryGuests">3–4 персони</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Дата та час</span>
+                            <span class="summary-val" id="summaryTime">Оберіть час вище</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Умови посадки</span>
+                            <span class="summary-val" style="color: #4ade80;">Безкоштовно онлайн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.05rem; margin-top: 15px;">
+                    <i class="fa-solid fa-check-circle"></i> Підтвердити бронювання столика
+                </button>
+            </form>
+        </div>
+
+        <!-- ТАБЛИЦЯ 1: Характеристики залів та умови резервації -->
+        <div class="table-section">
+            <div class="section-header">
+                <span class="section-pill"><i class="fa-solid fa-chair"></i> Посадка та простори</span>
+                <h2 class="section-title">Таблиця характеристик залів та умов резервації</h2>
+                <p class="section-subtitle">Ознайомтеся з деталями посадки, місткістю та атмосферою кожної локації ресторану:</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-door-open"></i> Зона закладу</th>
+                            <th><i class="fa-solid fa-users"></i> Місткість</th>
+                            <th><i class="fa-solid fa-table-cells-large"></i> Столики</th>
+                            <th><i class="fa-solid fa-eye"></i> Особливості та атмосфера</th>
+                            <th><i class="fa-solid fa-credit-card"></i> Депозит на вечір</th>
+                            <th><i class="fa-solid fa-champagne-glasses"></i> Рекомендовано для</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Біля панорамного вікна</strong></td>
+                            <td>до 24 персон</td>
+                            <td>8 столиків</td>
+                            <td>Краєвид на старовинну вулицю Шевченка, денне сонце</td>
+                            <td><span class="table-badge badge-green">Без депозиту</span></td>
+                            <td>Побачення, бізнес-зустрічі, ранкова кава</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Зелена літня тераса</strong></td>
+                            <td>до 42 персон</td>
+                            <td>14 столиків</td>
+                            <td>Відкрите небо, живі квіти, пледи, теплі газові обігрівачі</td>
+                            <td><span class="table-badge badge-green">Без депозиту</span></td>
+                            <td>Дружні компанії, літні сніданки, вино</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Затишний VIP-лаунж</strong></td>
+                            <td>до 18 персон</td>
+                            <td>4 м'які зони</td>
+                            <td>Камін, шкіряні дивани, приглушене світло, приватність</td>
+                            <td><span class="table-badge badge-gold">300 грн / персона</span></td>
+                            <td>Дні народження, банкети, закриті переговори</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Основний ресторанний зал</strong></td>
+                            <td>до 50 персон</td>
+                            <td>16 столиків</td>
+                            <td>Вид на відкриту шеф-кухню та вітрину свіжих десертів</td>
+                            <td><span class="table-badge badge-green">Без депозиту</span></td>
+                            <td>Сімейні обіди, вечері у центрі подій</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ТАБЛИЦЯ 2: Графік роботи та жива музика -->
+        <div class="table-section">
+            <div class="section-header">
+                <span class="section-pill"><i class="fa-solid fa-music"></i> Музичний розклад</span>
+                <h2 class="section-title">Графік роботи кухні та вечори живої музики</h2>
+                <p class="section-subtitle">Плануйте свій візит відповідно до годин роботи шеф-кухаря та виступів музикантів:</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-calendar-day"></i> Дні тижня</th>
+                            <th><i class="fa-solid fa-mug-hot"></i> Кав'ярня та бар</th>
+                            <th><i class="fa-solid fa-fire-burner"></i> Гаряча шеф-кухня</th>
+                            <th><i class="fa-solid fa-guitar"></i> Жива музика</th>
+                            <th><i class="fa-solid fa-circle-exclamation"></i> Рекомендований час броні</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Понеділок – Четвер</strong></td>
+                            <td>08:00 – 23:00</td>
+                            <td>08:00 – 22:00</td>
+                            <td>Фоновий джаз & лоу-фай</td>
+                            <td>За 2–3 години до візиту</td>
+                        </tr>
+                        <tr>
+                            <td><strong>П'ятниця</strong></td>
+                            <td>08:00 – 23:30</td>
+                            <td>08:00 – 22:30</td>
+                            <td><span class="table-badge badge-gold">🎷 Live Jazz 19:30–22:00</span></td>
+                            <td>За 1–2 дні (високий попит)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Субота</strong></td>
+                            <td>09:00 – 23:30</td>
+                            <td>09:00 – 22:30</td>
+                            <td><span class="table-badge badge-gold">🎸 Акустичний дует 19:30–22:00</span></td>
+                            <td>За 1–2 дні (високий попит)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Неділя</strong></td>
+                            <td>09:00 – 23:00</td>
+                            <td>09:00 – 22:00</td>
+                            <td><span class="table-badge badge-green">🎹 Фортепіано 18:00–20:30</span></td>
+                            <td>За день до візиту</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Зовнішні посилання з target="_blank" (Обов'язкова вимога методички) -->
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-map-location-dot"></i> Навігація та Відгуки</span>
+            <h2 class="section-title">Ми на картах та у міжнародних рейтингах</h2>
+            <p class="section-subtitle">Прокладіть найзручніший маршрут або прочитайте правдиві враження відвідувачів ресторану:</p>
+        </div>
+
+        <div class="external-cards-grid">
+            <!-- Google Maps -->
+            <div class="external-card">
+                <div>
+                    <div class="external-card-top">
+                        <div class="external-icon maps"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <div>
+                            <h3>Локація на Google Maps</h3>
+                            <div class="rating-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 6px;">4.9 (420+ відгуків)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Прокладіть швидкий автомобільний або пішохідний маршрут від Оперного театру чи площі Ринок до затишного ресторану «Aroma & Taste».</p>
+                </div>
+                <div>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+                        <i class="fa-solid fa-diamond-turn-right"></i> Прокласти маршрут на карті ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- TripAdvisor -->
+            <div class="external-card">
+                <div>
+                    <div class="external-card-top">
+                        <div class="external-icon tripadvisor"><i class="fa-solid fa-award"></i></div>
+                        <div>
+                            <h3>Рейтинг на TripAdvisor</h3>
+                            <div class="rating-stars" style="color: #00aa6c;">
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 6px;">#3 серед закладів Львова</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Ознайомтеся з відгуками міжнародних туристів, фотографіями живої подачі страв, рейтингами шеф-кухаря та сертифікатом Travellers’ Choice.</p>
+                </div>
+                <div>
+                    <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+                        <i class="fa-solid fa-comments"></i> Читати відгуки на TripAdvisor ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Повернутися на початок сторінки</a>
+        </div>
+    </main>
+
+    <!-- МОДЕРНІЗОВАНИЙ ПРЕМІАЛЬНИЙ ФУТЕР -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Колонка 1: Про заклад -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: #fff; font-size: 1.6rem; margin-bottom: 14px;">
+                        <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                        Aroma<span>&</span>Taste
+                    </a>
+                    <p>Завжди щиро чекаємо на вас у гості! Комфортна посадка, смачна кухня та тепла атмосфера в історичному центрі міста.</p>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--gold); font-size: 0.95rem; font-weight: 700; margin-bottom: 16px;">
+                        <i class="fa-solid fa-star"></i> 4.9 на основі понад 650 відгуків гостей
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Колонка 2: Наскрізна навігація проєкту -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-sitemap"></i> Навігація сайту</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Головна сторінка</a></li>
+                        <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Меню ресторану</a></li>
+                        <li><a href="promotions.html"><i class="fa-solid fa-chevron-right"></i> Акції та знижки</a></li>
+                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Бронювання столика</a></li>
+                        <li><a href="reviews.html"><i class="fa-solid fa-chevron-right"></i> Відгуки гостей</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: Розділи меню -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-list-check"></i> Розділи меню</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html#drinks"><i class="fa-solid fa-mug-saucer"></i> Кава та напої</a></li>
+                        <li><a href="menu.html#main-dishes"><i class="fa-solid fa-bowl-food"></i> Основні страви</a></li>
+                        <li><a href="menu.html#desserts"><i class="fa-solid fa-cake-candles"></i> Десерти</a></li>
+                        <li><a href="menu.html#nutrition"><i class="fa-solid fa-apple-whole"></i> КБЖВ та алергени</a></li>
+                        <li><a href="menu.html#coffee-map"><i class="fa-solid fa-earth-africa"></i> Карта Specialty</a></li>
+                        <li><a href="#top"><i class="fa-solid fa-arrow-up"></i> Нагору</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 4: Години роботи, контакти та картка автора -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-headset"></i> Служба турботи</h3>
+                    <div class="footer-schedule">
+                        <p><strong>Служба хостес:</strong> щодня 08:00 – 23:00</p>
+                    </div>
+                    <div class="footer-contact-item" style="margin-top: 14px;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Дзвінок: </span>
+                        <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Пошта: </span>
+                        <a href="mailto:booking@aroma-taste.ua">booking@aroma-taste.ua</a>
+                    </div>
+
+                    <!-- Студентська картка автора проєкту -->
+                    <div class="footer-student-card">
+                        <div class="footer-student-card-title">
+                            <i class="fa-solid fa-graduation-cap"></i> Навчальний проєкт
+                        </div>
+                        <div class="footer-student-card-author">
+                            Автор: <strong>Максим Ковалишин</strong>
+                        </div>
+                        <div class="footer-student-card-desc">
+                            Практична робота №9 &bull; 2026 рік
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижня смужка авторських прав та офіційного copyright -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright-main">
+                        <div class="copyright-row">
+                            <span class="copyright-symbol">©</span>
+                            <span>2026 Ресторан-кав'ярня «Aroma & Taste». <strong>Всі права захищені.</strong> Вміст захищений авторським правом.</span>
+                        </div>
+                        <div class="copyright-author-badge">
+                            <i class="fa-solid fa-user-pen"></i> Автор: <strong>Максим Ковалишин</strong>
+                            <span class="badge-dot">•</span>
+                            <i class="fa-solid fa-graduation-cap"></i> <strong>Практична робота №9</strong>
+                        </div>
+                    </div>
+                    <div class="footer-legal-links">
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot"></i> Google Maps ↗</a>
+                        <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-award"></i> TripAdvisor ↗</a>
+                        <span class="legal-badge"><i class="fa-solid fa-shield-halved"></i> Захищено авторським правом</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно успішного бронювання -->
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 10px;">Столик успішно заброньовано!</h3>
+            <p id="modalBookingDetails" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 22px; line-height: 1.6;"></p>
+            <div style="background: var(--bg-page); border: 1px solid var(--surface-border); border-radius: var(--radius-md); padding: 14px; margin-bottom: 24px;">
+                <div style="font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; font-weight: 700;">Код резервації:</div>
+                <div id="bookingCode" style="font-size: 1.3rem; font-weight: 800; color: var(--accent); letter-spacing: 1px;">AROMA-2026-7841</div>
+            </div>
+            <button onclick="closeModal()" class="btn btn-primary" style="width: 100%;">Чудово, до зустрічі!</button>
+        </div>
+    </div>
+
+    <!-- Плаваюча кнопка повернення вгору -->
+    <a href="#top" class="floating-top-btn" id="scrollTopBtn" title="Повернутися нагору" aria-label="Повернутися нагору">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Скрипт обробки форми, інтерактивного прев'ю та модального вікна -->
+    <script>
+        // Мобільне меню
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                    navMenu.classList.remove('open');
+                }
+            });
+        }
+
+        // Кнопка нагору
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 350) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        });
+
+        // Встановлення мінімального часу для вибору дати
+        const datetimeInput = document.getElementById('datetime');
+        if (datetimeInput) {
+            const now = new Date();
+            now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+            datetimeInput.min = now.toISOString().slice(0, 16);
+        }
+
+        // Оновлення живого попереднього підсумку
+        function updateSummary() {
+            const hallInput = document.querySelector('input[name="hall"]:checked');
+            const guestsInput = document.getElementById('guests');
+            const timeInput = document.getElementById('datetime');
+
+            if (hallInput) document.getElementById('summaryHall').textContent = hallInput.value;
+            if (guestsInput) document.getElementById('summaryGuests').textContent = guestsInput.options[guestsInput.selectedIndex].text.split('(')[0].trim();
+            if (timeInput && timeInput.value) {
+                const dateObj = new Date(timeInput.value);
+                const formatted = dateObj.toLocaleString('uk-UA', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+                document.getElementById('summaryTime').textContent = formatted;
+            }
+        }
+
+        document.querySelectorAll('input[name="hall"]').forEach(el => el.addEventListener('change', updateSummary));
+        document.getElementById('guests')?.addEventListener('change', updateSummary);
+        document.getElementById('datetime')?.addEventListener('change', updateSummary);
+
+        // Обробка форми бронювання
+        function handleBooking(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const guests = document.getElementById('guests').options[document.getElementById('guests').selectedIndex].text.split('(')[0].trim();
+            const hall = document.querySelector('input[name="hall"]:checked').value;
+            const timeVal = document.getElementById('datetime').value;
+            const randomCode = 'AROMA-' + Math.floor(1000 + Math.random() * 9000);
+
+            document.getElementById('bookingCode').textContent = randomCode;
+            document.getElementById('modalBookingDetails').innerHTML = 
+                `Дякуємо, <strong>${name}</strong>!<br>Ваш стіл зарезервовано на <strong>${guests}</strong> у зоні <strong>«${hall}»</strong>.<br>Адміністратор надішле SMS-підтвердження за 5 хвилин.`;
+
+            document.getElementById('bookingModal').classList.add('active');
+            event.target.reset();
+            updateSummary();
+        }
+
+        function closeModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+        }
+
+        document.getElementById('bookingModal')?.addEventListener('click', (e) => {
+            if (e.target === document.getElementById('bookingModal')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню ресторану та кав'ярні — Aroma & Taste | Практична робота №9</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Стилі -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <!-- Інфо-стрічка -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>вул. Шевченка, 12, Львів</span>
+                <span style="opacity: 0.5; margin: 0 4px;">•</span>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+            </div>
+            <div class="top-bar-item">
+                <span class="badge-student">
+                    <i class="fa-solid fa-graduation-cap"></i> Практична робота №9
+                </span>
+                <span class="status-badge">
+                    <span class="status-dot"></span>
+                    Кухня активна
+                </span>
+                <span><i class="fa-solid fa-kitchen-set" style="margin-right: 4px;"></i> Замовлення страв приймаються до 22:30</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Наскрізне меню -->
+    <header>
+        <div class="container nav-bar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                Aroma<span>&</span>Taste
+            </a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Відкрити меню навігації">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Головна</a></li>
+                    <li><a href="menu.html" class="active"><i class="fa-solid fa-utensils"></i> Меню</a></li>
+                    <li><a href="promotions.html"><i class="fa-solid fa-tags"></i> Акції</a></li>
+                    <li><a href="booking.html"><i class="fa-solid fa-calendar-check"></i> Бронювання</a></li>
+                    <li><a href="reviews.html"><i class="fa-solid fa-star"></i> Відгуки</a></li>
+                </ul>
+            </nav>
+            <a href="booking.html" class="nav-cta-btn"><i class="fa-solid fa-chair"></i> Забронювати стіл</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header">
+            <span class="section-pill"><i class="fa-solid fa-book-open"></i> Гастрономічна карта • Практична робота №9</span>
+            <h1 class="section-title">Меню ресторану та кав'ярні</h1>
+            <p class="section-subtitle">Оберіть категорію або скористайтеся швидким інтерактивним пошуком по всіх позиціях закладу:</p>
+        </div>
+
+        <!-- Сучасний інтерактивний тулбар пошуку та категорій -->
+        <div class="menu-filter-toolbar">
+            <div class="menu-search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="dishSearch" class="menu-search-input" placeholder="Швидкий пошук страви, напою чи інгредієнта...">
+            </div>
+            <div class="filter-chips">
+                <button class="chip-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> Усі страви</button>
+                <a href="#drinks" class="chip-btn" data-filter="drinks"><i class="fa-solid fa-mug-hot"></i> Кава & Напої</a>
+                <a href="#main-dishes" class="chip-btn" data-filter="main-dishes"><i class="fa-solid fa-bowl-food"></i> Основні страви</a>
+                <a href="#desserts" class="chip-btn" data-filter="desserts"><i class="fa-solid fa-cake-candles"></i> Десерти</a>
+                <a href="#nutrition" class="chip-btn"><i class="fa-solid fa-apple-whole"></i> КБЖВ</a>
+                <a href="#coffee-map" class="chip-btn"><i class="fa-solid fa-earth-africa"></i> Specialty Карта</a>
+            </div>
+        </div>
+
+        <!-- Якірний блок 1: Напої -->
+        <section id="drinks" class="menu-category-block">
+            <div class="menu-category-header">
+                <h2><i class="fa-solid fa-mug-saucer"></i> Кавова карта та Напої</h2>
+                <span class="category-desc">Зерна 100% Arabica Specialty, рослинне молоко на вибір</span>
+            </div>
+            
+            <div class="dish-list">
+                <!-- Страва 1 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Подвійний Еспресо Доппіо">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-award"></i> 100% Арабіка</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 60 мл</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Specialty</span>
+                        </div>
+                        <h4>Подвійний Еспресо (Доппіо)</h4>
+                        <p>Щільне оксамитове тіло, виразна цитрусова кислотність та довгий післясмак темного бельгійського шоколаду.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">55 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Смакувати</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 2 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" alt="Капучино з корицею">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-fire"></i> Хіт продажу</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 220 мл</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Класика</span>
+                        </div>
+                        <h4>Капучино з пряною корицею</h4>
+                        <p>Шовковиста молочна мікропінка ідеальної температури, подвійний шот свіжозмеленого еспресо та справжня цейлонська кориця.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">75 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Смакувати</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 3 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="Крафтовий чай обліпиха-імбир">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-leaf"></i> Вітамінний заряд</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 450 мл</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Крафт-чай</span>
+                        </div>
+                        <h4>Чай «Обліпиха - Імбир - Мед»</h4>
+                        <p>Натуральне карпатське пюре обліпихи, свіжий корінь імбиру, липовий мед, гілочка свіжого чебрецю та бадьян.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">70 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Смакувати</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 4 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80" alt="Японська церемоніальна матча">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-sparkles"></i> Суперфуд</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 280 мл</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Japan Grade</span>
+                        </div>
+                        <h4>Церемоніальний Матча-Лате</h4>
+                        <p>Оригінальна японська матча преміум-класу Uji, приготована вінчиком часен на кокосовому або вівсяному молоці.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">90 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Смакувати</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 5 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80" alt="Колд Брю з тоніком">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-bolt"></i> Cold Brew</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 300 мл</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Освіжаюче</span>
+                        </div>
+                        <h4>Cold Brew Tonic з грейпфрутом</h4>
+                        <p>Кава 18-годинної холодної мацерації, ігристий крафтовий тонік, слайс рожевого грейпфрута та кубики прозорого льоду.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">85 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Смакувати</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 6 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80" alt="Флет Вайт">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-seedling"></i> Vegan Milk</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 200 мл</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Насичений</span>
+                        </div>
+                        <h4>Флет-Вайт на вівсяному молоці</h4>
+                        <p>Подвійний доппіо з щільним шовковистим вівсяним молоком без цукру. Максимальний баланс сили кави та ніжності.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">80 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Смакувати</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Повернутися до вибору категорій</a>
+        </section>
+
+        <!-- Якірний блок 2: Основні страви -->
+        <section id="main-dishes" class="menu-category-block">
+            <div class="menu-category-header">
+                <h2><i class="fa-solid fa-utensils"></i> Фірмові основні страви</h2>
+                <span class="category-desc">Приготовано на живому вогні та авторськими соусами від шефа</span>
+            </div>
+
+            <div class="dish-list">
+                <!-- Страва 1 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=600&q=80" alt="Паста Карбонара">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-star"></i> Традиційний рецепт</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 320 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Італія</span>
+                        </div>
+                        <h4>Паста Карбонара за римським рецептом</h4>
+                        <p>Свіжа паста ручної роботи, в'ялена панчета гуанчале, витриманий сир Pecorino Romano, фермерський жовток та свіжозмелений чорний перець.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">220 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Замовити</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 2 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=80" alt="Стейк лосося">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-crown"></i> Шеф-вибір</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 280 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Seafood</span>
+                        </div>
+                        <h4>Стейк норвезького лосося на грилі</h4>
+                        <p>Філе свіжого лосося з хрусткою скоринкою, подається з ніжною спаржею гриль, томатами чері confit та голландським лимонним соусом.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">340 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Замовити</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 3 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="Грибний крем-суп">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-leaf"></i> Вегетаріанське</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 300 мл</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Супи</span>
+                        </div>
+                        <h4>Ніжний грибний крем-суп з трюфелем</h4>
+                        <p>Карпатські білі гриби, вершки 33%, ароматизована біла трюфельна олія, гарбузове насіння та хрусткі золотисті часникові крутони.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">155 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Замовити</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 4 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=600&q=80" alt="Стейк Ribeye">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-fire-flame-curved"></i> Преміум</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 350 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">М'ясо</span>
+                        </div>
+                        <h4>Соковитий стейк Ribeye з розмарином</h4>
+                        <p>Мармурова витримана яловичина сухої ферментації (просмаження Medium), запечений часник, розмарин та насичений соус Демігляс.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">395 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Замовити</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 5 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=600&q=80" alt="Салат з буратою">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-seedling"></i> Свіжість</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 260 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Салати</span>
+                        </div>
+                        <h4>Салат з фермерською Буратою</h4>
+                        <p>Кремовий мішечок свіжої бурати, соковиті томати різних сортів, соус песто з базиліку, бальзамічний крем та обсмажені кедрові горішки.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">210 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Замовити</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 6 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1514944298352-f47a9ef3fc94?auto=format&fit=crop&w=600&q=80" alt="Качина грудка">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-utensils"></i> Авторське</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 290 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Птиця</span>
+                        </div>
+                        <h4>Філе качки з грушевим конфітюром</h4>
+                        <p>Ніжне соковите качине філе су-від, карамелізована груша у пряному вині, ягідний соус ожина-портвейн та пюре з селери.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">310 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Замовити</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Повернутися до вибору категорій</a>
+        </section>
+
+        <!-- Якірний блок 3: Десерти -->
+        <section id="desserts" class="menu-category-block">
+            <div class="menu-category-header">
+                <h2><i class="fa-solid fa-cake-candles"></i> Кондитерські десерти</h2>
+                <span class="category-desc">Власна щоденна випічка, бельгійський шоколад та натуральні вершки</span>
+            </div>
+
+            <div class="dish-list">
+                <!-- Страва 1 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80" alt="Баскський чизкейк">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-award"></i> Фірмовий десерт</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 180 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">San Sebastian</span>
+                        </div>
+                        <h4>Баскський випалений чизкейк</h4>
+                        <p>Неймовірно ніжна текуча кремова серцевина, рум'яна карамелізована скоринка, подається з теплою домашньою солоною карамеллю.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">140 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Спробувати</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 2 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80" alt="Тірамісу">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-star"></i> Класика Італії</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 160 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Dolce</span>
+                        </div>
+                        <h4>Тірамісу з печивом Савоярді</h4>
+                        <p>Просочення міцним подвійним еспресо та італійським лікером Amaretto Disaronno, повітряний крем з оригінального сиру Mascarpone та какао Cacao Barry.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">130 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Спробувати</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 3 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80" alt="Шоколадний фондан">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-fire"></i> Гаряча подача</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 170 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Франція</span>
+                        </div>
+                        <h4>Шоколадний вулкан (Фондан)</h4>
+                        <p>Французький десерт із текучим гарячим шоколадом Callebaut 70% какао, хрустким мигдалем та кулькою ванільного пломбіру.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">145 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Спробувати</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страва 4 -->
+                <div class="dish-card">
+                    <div class="dish-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=600&q=80" alt="Французькі макарони">
+                        <span class="dish-tag-badge"><i class="fa-solid fa-heart"></i> Ручна робота</span>
+                    </div>
+                    <div class="dish-details">
+                        <div class="dish-meta">
+                            <span class="dish-weight"><i class="fa-solid fa-scale-balanced"></i> 4 шт / 120 г</span>
+                            <span class="dish-tag" style="color: var(--accent); font-weight: 700;">Асорті</span>
+                        </div>
+                        <h4>Фісташкові та ягідні Макарони</h4>
+                        <p>Тонка мигдальна скоринка, соковитий ганаш на основі білого шоколаду Valrhona, італійської фісташкової пасти та пюре малини.</p>
+                        <div class="dish-footer">
+                            <div class="card-price">120 грн</div>
+                            <span class="dish-order-btn"><i class="fa-solid fa-plus"></i> Спробувати</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Повернутися до вибору категорій</a>
+        </section>
+
+        <!-- Якірний блок 4: ТАБЛИЦЯ КБЖВ ТА АЛЕРГЕНИ -->
+        <section id="nutrition" class="table-section">
+            <div class="section-header">
+                <span class="section-pill"><i class="fa-solid fa-apple-whole"></i> Здорове та свідоме харчування</span>
+                <h2 class="section-title">Таблиця харчової цінності, КБЖВ та алергенів</h2>
+                <p class="section-subtitle">Детальні показники калорійності, білків, жирів, вуглеводів та маркування алергенів для популярних позицій ресторану:</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-utensils"></i> Страва / Напій</th>
+                            <th><i class="fa-solid fa-scale-balanced"></i> Вихід</th>
+                            <th><i class="fa-solid fa-fire"></i> Калорії</th>
+                            <th><i class="fa-solid fa-dna"></i> Білки (Б)</th>
+                            <th><i class="fa-solid fa-droplet"></i> Жири (Ж)</th>
+                            <th><i class="fa-solid fa-wheat-awn"></i> Вуглеводи (В)</th>
+                            <th><i class="fa-solid fa-triangle-exclamation"></i> Наявні алергени</th>
+                            <th><i class="fa-solid fa-heart-pulse"></i> Особливість</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Подвійний Еспресо (Доппіо)</strong></td>
+                            <td>60 мл</td>
+                            <td>4 ккал</td>
+                            <td>0.2 г</td>
+                            <td>0.1 г</td>
+                            <td>0.6 г</td>
+                            <td>Відсутні</td>
+                            <td><span class="table-badge badge-green">Vegan / Sugar Free</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Лате з ваніллю Bourbon</strong></td>
+                            <td>320 мл</td>
+                            <td>185 ккал</td>
+                            <td>7.8 г</td>
+                            <td>8.2 г</td>
+                            <td>20.1 г</td>
+                            <td>Лактоза (доступне вівсяне / кокосове)</td>
+                            <td><span class="table-badge badge-gold">Без глютену</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Флет-вайт на вівсяному молоці</strong></td>
+                            <td>200 мл</td>
+                            <td>110 ккал</td>
+                            <td>3.2 г</td>
+                            <td>4.0 г</td>
+                            <td>15.5 г</td>
+                            <td>Вівсяна основа (глютен &lt; 20 ppm)</td>
+                            <td><span class="table-badge badge-green">100% Plant-based</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cold Brew Tonic з розмарином</strong></td>
+                            <td>280 мл</td>
+                            <td>65 ккал</td>
+                            <td>0.3 г</td>
+                            <td>0.1 г</td>
+                            <td>15.8 г</td>
+                            <td>Хінін (тонік)</td>
+                            <td><span class="table-badge badge-green">Vegan Refresh</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Фетучині з білими грибами</strong></td>
+                            <td>340 г</td>
+                            <td>540 ккал</td>
+                            <td>16.4 г</td>
+                            <td>24.8 г</td>
+                            <td>62.5 г</td>
+                            <td>Глютен, лактоза, пармезан</td>
+                            <td><span class="table-badge badge-dark">Vegetarian</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Філе фермерської качки Sous-Vide</strong></td>
+                            <td>320 г</td>
+                            <td>620 ккал</td>
+                            <td>38.5 г</td>
+                            <td>32.0 г</td>
+                            <td>44.0 г</td>
+                            <td>Лактоза (вершкове масло у пюре)</td>
+                            <td><span class="table-badge badge-gold">High Protein</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Стейк норвезького лосося на грилі</strong></td>
+                            <td>300 г</td>
+                            <td>490 ккал</td>
+                            <td>42.0 г</td>
+                            <td>28.5 г</td>
+                            <td>16.0 г</td>
+                            <td>Риба, гірчиця діжонська (у заправці)</td>
+                            <td><span class="table-badge badge-green">Omega-3 / Keto</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Салат із печеним буряком та козячим сиром</strong></td>
+                            <td>270 г</td>
+                            <td>315 ккал</td>
+                            <td>11.2 г</td>
+                            <td>21.0 г</td>
+                            <td>19.8 г</td>
+                            <td>Лактоза, волоські горіхи</td>
+                            <td><span class="table-badge badge-dark">Vegetarian / Organic</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Баскський чизкейк «Сан-Себастьян»</strong></td>
+                            <td>160 г</td>
+                            <td>485 ккал</td>
+                            <td>9.6 г</td>
+                            <td>34.2 г</td>
+                            <td>35.0 г</td>
+                            <td>Молочний білок, вершки, яєчний жовток</td>
+                            <td><span class="table-badge badge-gold">Gluten Free</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Фісташкові та ягідні Макарони</strong></td>
+                            <td>120 г (4 шт)</td>
+                            <td>440 ккал</td>
+                            <td>8.0 г</td>
+                            <td>23.5 г</td>
+                            <td>49.0 г</td>
+                            <td>Мигдальне борошно, фісташка, молоко, яйця</td>
+                            <td><span class="table-badge badge-gold">Handmade French</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Повернутися до вибору категорій</a>
+        </section>
+
+        <!-- Якірний блок 5: ТАБЛИЦЯ ЗЕРЕН SPECIALTY COFFEE -->
+        <section id="coffee-map" class="table-section">
+            <div class="section-header">
+                <span class="section-pill"><i class="fa-solid fa-earth-americas"></i> Single-Origin Карта</span>
+                <h2 class="section-title">Гід спешелті сортами кави закладу (Specialty Coffee Guide)</h2>
+                <p class="section-subtitle">Прозоре походження, висоти зростання, методи обробки та міжнародні бали SCA для нашої кавової карти:</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fa-solid fa-flag"></i> Країна та Сорт</th>
+                            <th><i class="fa-solid fa-mountain"></i> Регіон / Ферма</th>
+                            <th><i class="fa-solid fa-arrow-up-right-dots"></i> Висота зростання</th>
+                            <th><i class="fa-solid fa-seedling"></i> Різновид та обробка</th>
+                            <th><i class="fa-solid fa-star"></i> Оцінка SCA</th>
+                            <th><i class="fa-solid fa-wine-glass"></i> Смаковий профіль (Дескриптори)</th>
+                            <th><i class="fa-solid fa-mug-saucer"></i> Рекомендована заварка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ефіопія Yirgacheffe Idido</strong></td>
+                            <td>Гедео, громада Ідідо</td>
+                            <td>2050 – 2200 м</td>
+                            <td>Heirloom (місцеві різновиди), Мита (Washed)</td>
+                            <td><span class="table-badge badge-gold">88.50 / 100</span></td>
+                            <td>Жасмин, бергамот, білий стиглий персик, цедра лайма</td>
+                            <td><span class="table-badge badge-green">V60 / Еспресо</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Колумбія Huila El Paraiso</strong></td>
+                            <td>Уїла, ферма Дієго Бермудеса</td>
+                            <td>1850 – 1950 м</td>
+                            <td>Castillo, Подвійна анаеробна ферментація</td>
+                            <td><span class="table-badge badge-gold">89.25 / 100</span></td>
+                            <td>Суниця, рожеве вино, лемонграс, лічі, вершковий йогурт</td>
+                            <td><span class="table-badge badge-green">Aeropress / Chemex</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Кенія Nyeri Hill Peaberry</strong></td>
+                            <td>Ньєрі, південні схили г. Кенія</td>
+                            <td>1900 – 2050 м</td>
+                            <td>SL28 &amp; SL34 Peaberry, Подвійна мита (Double Washed)</td>
+                            <td><span class="table-badge badge-gold">88.00 / 100</span></td>
+                            <td>Чорна смородина, червоний грейпфрут, карамель, чорний чай</td>
+                            <td><span class="table-badge badge-green">V60 / Kalita Wave</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Коста-Рика Tarrazu San Rafael</strong></td>
+                            <td>Долина Таррасу, Сан-Рафаель</td>
+                            <td>1600 – 1800 м</td>
+                            <td>Caturra / Catuai, Yellow Honey (Жовтий мед)</td>
+                            <td><span class="table-badge badge-dark">87.25 / 100</span></td>
+                            <td>Квітковий мед, жовте яблуко, фундук, молочний шоколад</td>
+                            <td><span class="table-badge badge-green">Flat White / Cappuccino</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Гватемала Antigua Pastoral</strong></td>
+                            <td>Вулканічна долина Антігуа</td>
+                            <td>1650 – 1900 м</td>
+                            <td>Bourbon / Typica, Класична мита (Washed)</td>
+                            <td><span class="table-badge badge-dark">86.75 / 100</span></td>
+                            <td>Темний бельгійський шоколад, карамель, сушений інжир, горіх</td>
+                            <td><span class="table-badge badge-green">Доппіо / Американо</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="#top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Повернутися до вибору категорій</a>
+        </section>
+    </main>
+
+    <!-- МОДЕРНІЗОВАНИЙ ПРЕМІАЛЬНИЙ ФУТЕР -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Колонка 1: Про заклад -->
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: #fff; font-size: 1.6rem; margin-bottom: 14px;">
+                        <span class="logo-icon"><i class="fa-solid fa-mug-hot"></i></span>
+                        Aroma<span>&</span>Taste
+                    </a>
+                    <p>Найкращі світові сорти спешелті кави, щоденна свіжа випічка та сезонне ресторанне меню в затишній атмосфері міста Лева.</p>
+                    <div style="display: flex; align-items: center; gap: 8px; color: var(--gold); font-size: 0.95rem; font-weight: 700; margin-bottom: 16px;">
+                        <i class="fa-solid fa-star"></i> 4.9 на основі понад 650 відгуків гостей
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Колонка 2: Наскрізна навігація проєкту -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-sitemap"></i> Навігація сайту</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Головна сторінка</a></li>
+                        <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Меню закладу</a></li>
+                        <li><a href="promotions.html"><i class="fa-solid fa-chevron-right"></i> Акції та бонуси</a></li>
+                        <li><a href="booking.html"><i class="fa-solid fa-chevron-right"></i> Онлайн-резервація</a></li>
+                        <li><a href="reviews.html"><i class="fa-solid fa-chevron-right"></i> Відгуки та рейтинги</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 3: Розділи меню -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-list-check"></i> Розділи меню</h3>
+                    <ul class="footer-links">
+                        <li><a href="#drinks"><i class="fa-solid fa-mug-saucer"></i> Кава та напої</a></li>
+                        <li><a href="#main-dishes"><i class="fa-solid fa-bowl-food"></i> Фірмові гарячі страви</a></li>
+                        <li><a href="#desserts"><i class="fa-solid fa-cake-candles"></i> Кондитерські десерти</a></li>
+                        <li><a href="#nutrition"><i class="fa-solid fa-apple-whole"></i> КБЖВ та алергени</a></li>
+                        <li><a href="#coffee-map"><i class="fa-solid fa-earth-africa"></i> Карта зерен Specialty</a></li>
+                        <li><a href="#top"><i class="fa-solid fa-arrow-up"></i> На початок сторінки</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка 4: Години роботи та картка автора -->
+                <div class="footer-col">
+                    <h3><i class="fa-solid fa-clock"></i> Графік і Зв'язок</h3>
+                    <div class="footer-schedule">
+                        <p><strong>Пн – Пт:</strong> 08:00 – 23:00</p>
+                        <p><strong>Сб – Нд:</strong> 09:00 – 23:30</p>
+                    </div>
+                    <div class="footer-contact-item" style="margin-top: 14px;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Бронювання: </span>
+                        <a href="tel:+380991234567">+38 (099) 123-45-67</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Пошта: </span>
+                        <a href="mailto:info@aroma-taste.ua">info@aroma-taste.ua</a>
+                    </div>
+
+                    <!-- Студентська картка автора проєкту -->
+                    <div class="footer-student-card">
+                        <div class="footer-student-card-title">
+                            <i class="fa-solid fa-graduation-cap"></i> Навчальний проєкт
+                        </div>
+                        <div class="footer-student-card-author">
+                            Автор: <strong>Максим Ковалишин</strong>
+                        </div>
+                        <div class="footer-student-card-desc">
+                            Практична робота №9 &bull; 2026 рік
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижня смужка авторських прав та офіційного copyright -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright-main">
+                        <div class="copyright-row">
+                            <span class="copyright-symbol">©</span>
+                            <span>2026 Ресторан-кав'ярня «Aroma & Taste». <strong>Всі права захищені.</strong> Вміст захищений авторським правом.</span>
+                        </div>
+                        <div class="copyright-author-badge">
+                            <i class="fa-solid fa-user-pen"></i> Автор: <strong>Максим Ковалишин</strong>
+                            <span class="badge-dot">•</span>
+                            <i class="fa-solid fa-graduation-cap"></i> <strong>Практична робота №9</strong>
+                        </div>
+                    </div>
+                    <div class="footer-legal-links">
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot"></i> Google Maps ↗</a>
+                        <a href="https://www.tripadvisor.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-award"></i> TripAdvisor ↗</a>
+                        <span class="legal-badge"><i class="fa-solid fa-shield-halved"></i> Захищено авторським правом</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Контейнер для спливаючих сповіщень (Toast) -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Плаваюча кнопка повернення вгору -->
+    <a href="#top" class="floating-top-btn" id="scrollTopBtn" title="Повернутися нагору" aria-label="Повернутися нагору">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Скрипт інтерактивності меню -->
+    <script>
+        // Мобільне меню
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navMenu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                    navMenu.classList.remove('open');
+                }
+            });
+        }
+
+        // Кнопка нагору
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 350) {
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        });
+
+        // Спливаючі сповіщення (Toast)
+        function showToast(message) {
+            const container = document.getElementById('toastContainer');
+            if (!container) return;
+            const toast = document.createElement('div');
+            toast.className = 'toast-msg';
+            toast.innerHTML = `<i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> ${message}`;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // Обробка кнопок "Смакувати / Замовити"
+        document.querySelectorAll('.dish-order-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const dishCard = btn.closest('.dish-card');
+                const title = dishCard ? dishCard.querySelector('h4').textContent : 'Позицію';
+                showToast(`«${title}» додано до ваших уподобань! Назвіть офіціанту.`);
+            });
+        });
+
+        // Інтерактивний живий пошук страв
+        const searchInput = document.getElementById('dishSearch');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase().trim();
+                const dishCards = document.querySelectorAll('.dish-card');
+                dishCards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (!term || text.includes(term)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
